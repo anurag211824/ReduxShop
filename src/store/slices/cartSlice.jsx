@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+
 function findItemIndex(state, action) {
   return state.findIndex(
     (cartItem) => cartItem.productId === action.payload.productId
@@ -45,5 +46,6 @@ export const {
   removeCartItem,
   decreaseCartItemQuantity,
   increaseCartItemQuantity,
+  calculateTotalPrice,
 } = slice.actions;
 export default slice.reducer;
